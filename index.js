@@ -29,6 +29,13 @@ message: 'Provide instructions and examples for use.:'
 },
 
 {
+type: 'list',
+name: 'license',
+message: 'Choose a license for your project:',
+choices: ['MIT', '0BSD', 'None']
+},
+
+{
 type: 'input',
 name: 'contributing',
 message: 'How can others contribute to this project?:'
