@@ -44,8 +44,20 @@ message: 'How can others contribute to this project?:'
 {
 type: 'input',
 name: 'tests',
-message: 'add information on how to test the project:'
+message: 'Add information on how to test the project:'
 },
+
+{
+type: 'input',
+name: 'username',
+message: 'What is your GitHub username?:'
+},
+
+{
+type: 'input',
+name: 'email',
+message: 'What is your email?:'
+    },
 ];
 
 // TODO: Create a function to write README file
@@ -56,10 +68,11 @@ function writeToFile(fileName, data) { fs.writeFile(fileName, data, (err) =>
 
 // TODO: Create a function to initialize app
 function init() {inquirer.prompt(questions).then((data) => {
-  const markdown = generateMarkdown(data);
-  writeToFile('README.md', markdown);
+const markdown = generateMarkdown(data);
+writeToFile('README.md', markdown);
 });
 }
 
 // Function call to initialize app
 init();
+
